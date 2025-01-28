@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="EquityX_L00160463.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:EquityX_L00160463"
+    xmlns:views="clr-namespace:EquityX_L00160463.View"
+    Shell.FlyoutBehavior="Disabled"
+    FlyoutBackgroundColor="#3d5a80">
+
+    <Shell.TabBarBackgroundColor>white</Shell.TabBarBackgroundColor>
+
+
+    <FlyoutItem Title="Home" FlyoutDisplayOptions="AsMultipleItems">
+
+
+
+        <ShellContent
+            Title="Dashboard"
+            ContentTemplate="{DataTemplate views:Home}"
+            Route="Home" 
+            Icon="home.png"/>
+
+        <ShellContent
+            Title="Stocks"
+            ContentTemplate="{DataTemplate views:Stocks}"
+            Route="Stocks" 
+            Icon="stock_market.png" />
+
+        <ShellContent
+            Title="Crypto"
+            ContentTemplate="{DataTemplate views:Crypto}"
+            Route="Crypto" 
+            Icon="cryptowallet.png" />
+
+        <ShellContent
+            Title="Transactions"
+            ContentTemplate="{DataTemplate views:Transactions}"
+            Route="Transactions" 
+            Icon="file.png" />
+
+
+
+
+
+    </FlyoutItem>
+
+
+
+
+</Shell>

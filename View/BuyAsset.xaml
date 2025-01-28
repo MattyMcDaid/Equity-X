@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodel="clr-namespace:EquityX_L00160463.ViewModels"
+             x:DataType="viewmodel:BuyAssetViewModel"
+             x:Class="EquityX_L00160463.View.BuyAsset"
+             Title="Buy Asset"
+             Padding="10">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Spacing="20" Padding="20">
+                <Label Text="Buy Asset" FontSize="Title" FontAttributes="Bold" TextColor="#333" HorizontalOptions="CenterAndExpand" />
+
+                <Frame BackgroundColor="#FFFFFF" BorderColor="#CCCCCC" CornerRadius="15" HasShadow="True" Padding="10">
+                    <StackLayout Spacing="10">
+                        <Image Source="{Binding SelectedAsset.CoinImageUrl}" HeightRequest="150" WidthRequest="150" Aspect="AspectFit" HorizontalOptions="Center" />
+                        <Label Text="{Binding SelectedAsset.ShortName}" FontSize="18" FontAttributes="Bold" TextColor="#333" HorizontalOptions="Center" />
+                        <Label Text="{Binding SelectedAsset.RegularMarketPrice, StringFormat='Price: {0:C} per share'}" FontSize="14" TextColor="#666" HorizontalOptions="Center" />
+
+                        <Entry x:Name="QuantityEntry" Placeholder="Enter quantity" Keyboard="Numeric" WidthRequest="100" HorizontalOptions="Center" VerticalOptions="Center" Text="{Binding Quantity, Mode=TwoWay}"/>
+
+                        <Button Text="Buy" Command="{Binding BuyCommand}" BackgroundColor="#007ACC" TextColor="White" CornerRadius="10" HorizontalOptions="FillAndExpand" />
+                    </StackLayout>
+                </Frame>
+
+                <ListView ItemsSource="{Binding Purchases}" HasUnevenRows="True">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <VerticalStackLayout Padding="10">
+                                    <Label Text="{Binding SelectedAsset.ShortName}" FontSize="Medium" FontAttributes="Bold" />
+                                    <Label Text="{Binding SelectedAsset.RegularMarketPrice, StringFormat='Price: {0:C}'}" FontSize="Small" />
+                                    <Label Text="{Binding Quantity, StringFormat='Amount Purchased: {0:C}'}" FontSize="Small" />
+                                </VerticalStackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

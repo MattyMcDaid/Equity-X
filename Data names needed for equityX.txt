@@ -1,0 +1,9 @@
+Data names needed for equityX
+-----------------------
+
+displayName
+regularMarketPrice
+regularMarketChangePercent
+fiftyTwoWeekLow        
+fiftyTwoWeekHigh
+coinImageUrl

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:micro="clr-namespace:Microcharts.Maui;assembly=Microcharts.Maui"
+             x:Class="EquityX_L00160463.View.SellAsset"
+             Title="Sell Asset">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Spacing="20" Padding="20">
+                <Label Text="Current Market" FontSize="Title" FontAttributes="Bold" TextColor="#333" HorizontalOptions="CenterAndExpand" />
+
+                <!--barChart-->
+                <micro:ChartView x:Name="chartView" HeightRequest="200" HorizontalOptions="CenterAndExpand" />
+
+
+                <Frame BackgroundColor="#FFFFFF" BorderColor="#CCCCCC" CornerRadius="15" HasShadow="True" Padding="10">
+                    <StackLayout Spacing="10">
+                        <Image Source="logo.png" HeightRequest="150" WidthRequest="150" Aspect="AspectFit" HorizontalOptions="Center" />
+                        <Label Text="Amazon" FontSize="18" FontAttributes="Bold" TextColor="#333" HorizontalOptions="Center" />
+                        <Label Text="Price: $150.00 per share" FontSize="14" TextColor="#666" HorizontalOptions="Center" />
+
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                            <Label Text="Quantity: " FontSize="14" TextColor="#666" VerticalOptions="Center" />
+                            <StackLayout Orientation="Horizontal" Spacing="10">
+                                <Label x:Name="QuantityLabel1" Text="1" FontSize="14" TextColor="#333" VerticalOptions="Center" />
+
+
+                                <!--Got this bit off chat GPT i now understand that The CommandParameter is used to pass additional data or references to a command, allowing you to provide context or information to the command when it's executed.-->
+                                <Button Text="+" BackgroundColor="#3498db" TextColor="White" CornerRadius="5" Clicked="OnPlusClicked" CommandParameter="{x:Reference QuantityLabel1}" />
+                                <Button Text="-" BackgroundColor="#3498db" TextColor="White" CornerRadius="5" Clicked="OnMinusClicked" CommandParameter="{x:Reference QuantityLabel1}" />
+
+
+                            </StackLayout>
+                        </StackLayout>
+                        <Label Text="Your Shares: 12" FontSize="14" TextColor="#333" HorizontalOptions="Center" />
+                        <Label Text="Total Value: $1,800" FontSize="14" TextColor="#333" HorizontalOptions="Center" />
+                        <Button Text="Sell" BackgroundColor="#007ACC" TextColor="White" CornerRadius="10" HorizontalOptions="FillAndExpand" />
+                    </StackLayout>
+                </Frame>
+
+
+
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

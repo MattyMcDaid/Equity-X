@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34202.233
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EquityX-L00160463", "EquityX-L00160463.csproj", "{6946EE13-B6DE-446C-89CD-5143B8777E06}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6946EE13-B6DE-446C-89CD-5143B8777E06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6946EE13-B6DE-446C-89CD-5143B8777E06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6946EE13-B6DE-446C-89CD-5143B8777E06}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{6946EE13-B6DE-446C-89CD-5143B8777E06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6946EE13-B6DE-446C-89CD-5143B8777E06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6946EE13-B6DE-446C-89CD-5143B8777E06}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C8DF54CD-72B1-4430-9226-B44C2C431D9C}
+	EndGlobalSection
+EndGlobal
